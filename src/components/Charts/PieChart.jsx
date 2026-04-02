@@ -6,13 +6,13 @@ import {
   Cell,
 } from "recharts";
 
-// 🎨 Dynamic color generator (UNLIMITED COLORS)
+//  Dynamic color generator (UNLIMITED COLORS)
 const getColor = (index) => {
   const hue = (index * 47) % 360;
   return `hsl(${hue}, 65%, 60%)`;
 };
 
-// 🔢 Custom label inside pie
+//  Custom label inside pie
 const renderCustomLabel = ({ percent }) => {
   return `${(percent * 100).toFixed(0)}%`;
 };
@@ -23,7 +23,7 @@ const CustomPieChart = ({ data }) => {
   return (
     <div className="flex items-center justify-between w-full">
 
-      {/* 🥧 Chart */}
+      {/*  Chart */}
       <ResponsiveContainer width="60%" height={300}>
         <PieChart>
           <Pie
@@ -38,7 +38,7 @@ const CustomPieChart = ({ data }) => {
             {data.map((entry, index) => (
               <Cell
                 key={`cell-${index}`}
-                fill={getColor(index)}   // ✅ dynamic color
+                fill={getColor(index)}   
               />
             ))}
           </Pie>
@@ -55,7 +55,7 @@ const CustomPieChart = ({ data }) => {
         </PieChart>
       </ResponsiveContainer>
 
-      {/* 📋 Custom Legend */}
+      {/*  Custom Legend */}
       <div className="w-[40%] space-y-4">
         {data.map((item, index) => {
           const percentage = total
@@ -68,7 +68,7 @@ const CustomPieChart = ({ data }) => {
               className="flex items-center justify-between"
             >
               <div className="flex items-center gap-2">
-                {/* 🎨 Color Dot (MATCHES CHART) */}
+                {/*  Color Dot (MATCHES CHART) */}
                 <div
                   className="w-3 h-3 rounded-full"
                   style={{ backgroundColor: getColor(index) }}
@@ -78,7 +78,7 @@ const CustomPieChart = ({ data }) => {
                 </span>
               </div>
 
-              {/* 📊 Percentage */}
+              {/*  Percentage */}
               <span className="text-sm font-semibold">
                 {percentage}%
               </span>

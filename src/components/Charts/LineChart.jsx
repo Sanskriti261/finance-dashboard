@@ -13,7 +13,7 @@ const CustomLineChart = ({ data }) => {
     <ResponsiveContainer width="100%" height={300}>
       <AreaChart data={data}>
 
-        {/* 🎨 Gradient for shadow */}
+        {/*  Gradient for shadow */}
         <defs>
           <linearGradient id="colorBalance" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stopColor="#3b82f6" stopOpacity={0.4} />
@@ -21,10 +21,10 @@ const CustomLineChart = ({ data }) => {
           </linearGradient>
         </defs>
 
-        {/* 📊 Grid (lighter & cleaner) */}
+        {/*  Grid (lighter & cleaner) */}
         <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" opacity={0.3} />
 
-        {/* 🧭 X Axis */}
+        {/*  X Axis */}
         <XAxis
           dataKey="month"
           tick={{ fill: "#9ca3af", fontSize: 12 }}
@@ -32,14 +32,14 @@ const CustomLineChart = ({ data }) => {
           tickLine={false}
         />
 
-        {/* 📏 Y Axis (FIXED) */}
+        {/*  Y Axis (FIXED) */}
         <YAxis
           tick={{ fill: "#9ca3af", fontSize: 12 }}
           axisLine={false}
           tickLine={false}
         />
 
-        {/* 💬 Tooltip */}
+        {/*  Tooltip */}
         <Tooltip
           contentStyle={{
             backgroundColor: "#111827",
@@ -50,7 +50,7 @@ const CustomLineChart = ({ data }) => {
           cursor={{ stroke: "#3b82f6", strokeWidth: 1 }}
         />
 
-        {/* 🌊 Area (shadow fill) */}
+        {/*  Area (shadow fill) */}
         <Area
           type="monotone"
           dataKey="balance"

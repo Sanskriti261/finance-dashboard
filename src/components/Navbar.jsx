@@ -12,7 +12,7 @@ const Navbar = () => {
     shadow-sm border-b border-gray-200 dark:border-gray-700
     transition-all duration-300">
 
-      {/* 🔍 Search */}
+      {/*  Search */}
       <input
         type="text"
         placeholder="Search..."
@@ -22,16 +22,16 @@ const Navbar = () => {
         outline-none"
       />
 
-      {/* ⚙️ Right Section */}
+      {/*  Right Section */}
       <div className="flex items-center gap-6">
 
-        {/* 🔔 Notification */}
+        {/*  Notification */}
         <FaBell className="text-gray-500 cursor-pointer hover:text-black dark:hover:text-white transition" />
 
-        {/* ⚙️ Settings */}
+        {/*  Settings */}
         <FaCog className="text-gray-500 cursor-pointer hover:text-black dark:hover:text-white transition" />
 
-        {/* 🌗 Dark Mode */}
+        {/*  Dark Mode */}
         <button
           onClick={() => setDarkMode(!darkMode)}
           className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 
@@ -40,14 +40,14 @@ const Navbar = () => {
           {darkMode ? <FaSun /> : <FaMoon />}
         </button>
 
-        {/* 👤 Avatar */}
+        {/*  Avatar */}
         <img
           src="photo.jpg"
           alt="user"
           className="w-9 h-9 rounded-full cursor-pointer"
         />
 
-        {/* 👤 Role */}
+        {/*  Role */}
         <select
           value={role}
           onChange={(e) => setRole(e.target.value)}

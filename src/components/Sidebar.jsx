@@ -16,13 +16,13 @@ const Sidebar = () => {
     bg-gradient-to-b from-gray-900 to-gray-800 
     text-white p-5 flex flex-col justify-between">
 
-      {/* 🔝 Top Section */}
+      {/*  Top Section */}
       <div>
 
-        {/* 🏷️ Logo */}
+        {/*  Logo */}
         <h1 className="text-2xl font-bold mb-8">Finance</h1>
 
-        {/* 👤 Profile Section (NEW) */}
+        {/*  Profile Section (NEW) */}
         <div className="flex items-center gap-3 mb-8 p-3 rounded-lg bg-white/5">
           <img
             src="photo.jpg"
@@ -35,7 +35,7 @@ const Sidebar = () => {
           </div>
         </div>
 
-        {/* 📋 Menu */}
+        {/*  Menu */}
         <ul className="space-y-3">
           {menu.map((item) => (
             <li
@@ -56,7 +56,7 @@ const Sidebar = () => {
 
       </div>
 
-      {/* 🔻 Bottom Section (Logout) */}
+      {/*  Bottom Section (Logout) */}
       <div>
         <button className="flex items-center gap-3 p-3 w-full rounded-lg 
         hover:bg-red-500 transition">

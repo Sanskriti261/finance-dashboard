@@ -7,7 +7,7 @@ const TransactionTable = () => {
   const [search, setSearch] = useState("");
   const [typeFilter, setTypeFilter] = useState("all");
 
-  // 🔍 Filter logic
+  //  Filter logic
   const filteredData = transactions.filter((t) => {
     return (
       (typeFilter === "all" || t.type === typeFilter) &&
@@ -15,7 +15,7 @@ const TransactionTable = () => {
     );
   });
 
-  // ❌ Delete
+  //  Delete
   const handleDelete = (index) => {
     const updated = transactions.filter((_, i) => i !== index);
     setTransactions(updated);
@@ -24,14 +24,14 @@ const TransactionTable = () => {
   return (
     <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg">
 
-      {/* 🔝 Header */}
+      {/*  Header */}
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
 
         <h2 className="text-lg font-semibold text-gray-700 dark:text-white">
           Recent Transactions
         </h2>
 
-        {/* 🔍 Controls */}
+        {/*  Controls */}
         <div className="flex flex-wrap gap-3 items-center">
 
           {/* Search */}
@@ -65,7 +65,7 @@ const TransactionTable = () => {
         </div>
       </div>
 
-      {/* 📋 Table */}
+      {/*  Table */}
       <div className="overflow-x-auto">
         <table className="w-full text-left">
 

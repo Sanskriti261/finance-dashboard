@@ -15,7 +15,7 @@ import {
 const Dashboard = () => {
   const { transactions } = useContext(AppContext);
 
-  // 🔥 EXPORT CSV
+  //  EXPORT CSV
   const exportToCSV = () => {
     if (!transactions.length) return;
 
@@ -42,7 +42,7 @@ const Dashboard = () => {
     link.click();
   };
 
-  // 🔥 PIE DATA
+  //  PIE DATA
   const getPieData = () => {
     const expenseData = transactions.filter((t) => t.type === "expense");
 
@@ -62,7 +62,7 @@ const Dashboard = () => {
 
   const pieData = getPieData();
 
-  // 🔥 LINE DATA
+  //  LINE DATA
   const getLineData = () => {
     const months = ["Jan", "Feb", "Mar", "Apr"];
 
@@ -99,7 +99,7 @@ const Dashboard = () => {
 
   const lineData = getLineData();
 
-  // 🔥 SUMMARY
+  //  SUMMARY
   const totalIncome = transactions
     .filter((t) => t.type === "income")
     .reduce((acc, curr) => acc + curr.amount, 0);
@@ -110,7 +110,7 @@ const Dashboard = () => {
 
   const balance = totalIncome - totalExpense;
 
-  // 🔥 MONTHLY BALANCES
+  //  MONTHLY BALANCES
   const getMonthlyBalances = () => {
     const months = ["Jan", "Feb", "Mar", "Apr"];
 
@@ -154,7 +154,7 @@ const Dashboard = () => {
     { name: "Apr", value: april },
   ];
 
-  // 🔥 INSIGHTS
+  //  INSIGHTS
   const topCategory = pieData.length > 0 ? pieData[0] : null;
   const difference = april - march;
 
@@ -193,7 +193,7 @@ const Dashboard = () => {
       ? ((expenses[3] - expenses[2]) / expenses[2]) * 100
       : 0;
 
-  // 🔥 SMART INSIGHTS
+  //  SMART INSIGHTS
   const generateInsights = () => {
     let insights = [];
 
@@ -294,7 +294,7 @@ const Dashboard = () => {
 
       </div>
 
-      {/* 🔥 SMART INSIGHTS */}
+      {/*  SMART INSIGHTS */}
       <div className="bg-white dark:bg-gray-800 p-5 rounded-xl shadow">
         <p className="text-sm text-gray-500 mb-3">Smart Insights</p>
         <ul className="space-y-2">
